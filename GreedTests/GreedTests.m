@@ -18,6 +18,7 @@
     
     NSMutableArray *dice;
     NSNumber *one;
+    NSNumber *two;
     NSNumber *five;
 }
 
@@ -27,6 +28,7 @@
     greed = [[Greed alloc] init];
     dice = [[NSMutableArray alloc] init];
     one = [NSNumber numberWithInt:1];
+    two = [NSNumber numberWithInt:2];
     five = [NSNumber numberWithInt:5];
     
 }
@@ -37,13 +39,13 @@
     [super tearDown];
 }
 
-- (void)test_ASingleOne {
+- (void)test_1 {
     [dice addObject:one];
     int s = [greed score:dice];
     XCTAssertEqual(100, s, @"a single 1 scores 100");
 }
 
-- (void)test_ASingleFive {
+- (void)test_5 {
     [dice addObject:five];
     int s = [greed score:dice];
     XCTAssertEqual(50, s, @"a single 5 scores 50");
@@ -53,7 +55,15 @@
     [dice addObject:one];
     [dice addObject:[one copy]];
     int s = [greed score:dice];
-    XCTAssertEqual(200, s, @"2 1's scores 1200");
+    XCTAssertEqual(200, s, @"2 1's scores 200");
+}
+
+- (void)test_1_2_5 {
+    [dice addObject:one];
+    [dice addObject:two];
+    [dice addObject:five];
+    int s = [greed score:dice];
+    XCTAssertEqual(150, s, @"[1,2,5] scores 150");
 }
 
 @end
