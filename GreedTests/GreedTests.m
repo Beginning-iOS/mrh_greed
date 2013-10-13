@@ -107,6 +107,24 @@
     XCTAssertEqual(200, s, @"[2,2,2] scores 200");
 }
 
+- (void)test_3_3_3 {
+    [dice addObject:three];
+    [dice addObject:[three copy]];
+    [dice addObject:[three copy]];
+    int s = [greed score:dice];
+    XCTAssertEqual(300, s, @"[3,3,3] scores 300");
+}
+
+- (void)test_4_4_4_1_5 {
+    [dice addObject:four];
+    [dice addObject:one];
+    [dice addObject:[four copy]];
+    [dice addObject:five];
+    [dice addObject:[four copy]];
+    int s = [greed score:dice];
+    XCTAssertEqual(550, s, @"[4,1,4,5,1] scores 550");
+}
+
 
 
 @end
