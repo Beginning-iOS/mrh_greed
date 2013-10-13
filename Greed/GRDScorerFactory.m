@@ -22,6 +22,17 @@
         return scorer;
     }
     
+    for (int i=2; i<=6;i++) {
+        if ([self DiceContainsDie:i
+                 withCountAtLeast:3
+                          forDice:dice])
+        {
+            GRDScorer *scorer = [[GRDTriples alloc] initWithDie:i];
+            scorer.score = i * 100;
+            return scorer;
+        }
+    }
+    
     if ([self DiceContainsDie:1
              withCountAtLeast:1
                       forDice:dice])

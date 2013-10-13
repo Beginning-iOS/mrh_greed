@@ -12,6 +12,13 @@
 @interface GRDTripleOne : GRDScorer
 @end
 
+@interface GRDTriples : GRDScorer
+
+@property(nonatomic)int _die;
+
+- (id)initWithDie:(int)die;
+@end
+
 @interface GRDSingleOne : GRDScorer
 @end
 

@@ -18,8 +18,29 @@
     return dice;
 }
 
+@end
+
+
+@implementation GRDTriples
+
+@synthesize _die;
+
+-(id)initWithDie:(int)die {
+    self = [super init];
+    self._die = die;
+    return self;
+}
+
+- (NSMutableArray *)resetDice:(NSMutableArray *)dice {
+    
+    for (int i=0; i<3; i++) {
+        dice = [GRDScorer RemoveASingleDie:_die fromDice:dice];
+    }
+    return dice;
+}
 
 @end
+
 
 @implementation GRDSingleOne
 
