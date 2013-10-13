@@ -8,6 +8,19 @@
 
 #import "Rules.h"
 
+@implementation GRDTripleOne
+
+- (NSMutableArray *)resetDice:(NSMutableArray *)dice {
+
+    for (int i=0; i<3; i++) {
+        dice = [GRDScorer RemoveASingleDie:1 fromDice:dice];
+    }
+    return dice;
+}
+
+
+@end
+
 @implementation GRDSingleOne
 
 - (NSMutableArray *)resetDice:(NSMutableArray *)dice {

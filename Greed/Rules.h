@@ -9,18 +9,18 @@
 #import <Foundation/Foundation.h>
 #import "GRDScorer.h"
 
-@interface GRDSingleOne : GRDScorer
+@interface GRDTripleOne : GRDScorer
+@end
 
+@interface GRDSingleOne : GRDScorer
 @end
 
 
 @interface GRDSingleFive : GRDScorer
-
 @end
 
 
 @interface GRDEmpty : GRDScorer
-
 @end
 
 

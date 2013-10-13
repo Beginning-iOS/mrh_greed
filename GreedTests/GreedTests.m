@@ -19,7 +19,10 @@
     NSMutableArray *dice;
     NSNumber *one;
     NSNumber *two;
+    NSNumber *three;
+    NSNumber *four;
     NSNumber *five;
+    NSNumber *six;
 }
 
 
@@ -29,7 +32,10 @@
     dice = [[NSMutableArray alloc] init];
     one = [NSNumber numberWithInt:1];
     two = [NSNumber numberWithInt:2];
+    three = [NSNumber numberWithInt:3];
+    four = [NSNumber numberWithInt:4];
     five = [NSNumber numberWithInt:5];
+    six = [NSNumber numberWithInt:6];
     
 }
 
@@ -65,5 +71,42 @@
     int s = [greed score:dice];
     XCTAssertEqual(150, s, @"[1,2,5] scores 150");
 }
+
+- (void)test_1_1_1 {
+    [dice addObject:one];
+    [dice addObject:[one copy]];
+    [dice addObject:[one copy]];
+    int s = [greed score:dice];
+    XCTAssertEqual(1000, s, @"[1,1,1] scores 1000");
+}
+
+- (void)test_1_1_1_1 {
+    [dice addObject:one];
+    [dice addObject:[one copy]];
+    [dice addObject:[one copy]];
+    [dice addObject:[one copy]];
+    int s = [greed score:dice];
+    XCTAssertEqual(1100, s, @"[1,1,1,1] scores 1100");
+}
+
+- (void)test_1_1_1_1_5 {
+    [dice addObject:one];
+    [dice addObject:[one copy]];
+    [dice addObject:[one copy]];
+    [dice addObject:[one copy]];
+    [dice addObject:five];
+    int s = [greed score:dice];
+    XCTAssertEqual(1150, s, @"[1,1,1,1,5] scores 1150");
+}
+
+- (void)test_2_2_2 {
+    [dice addObject:two];
+    [dice addObject:[two copy]];
+    [dice addObject:[two copy]];
+    int s = [greed score:dice];
+    XCTAssertEqual(200, s, @"[2,2,2] scores 200");
+}
+
+
 
 @end

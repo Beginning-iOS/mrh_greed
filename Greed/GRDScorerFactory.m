@@ -14,6 +14,15 @@
 + (GRDScorer *)GetScorer:(NSMutableArray *)dice {
     
     if ([self DiceContainsDie:1
+             withCountAtLeast:3
+                      forDice:dice])
+    {
+        GRDScorer *scorer = [[GRDTripleOne alloc] init];
+        scorer.score = 1000;
+        return scorer;
+    }
+    
+    if ([self DiceContainsDie:1
              withCountAtLeast:1
                       forDice:dice])
     {
