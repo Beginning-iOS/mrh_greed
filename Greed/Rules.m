@@ -11,11 +11,9 @@
 @implementation GRDSingleOne
 
 - (NSMutableArray *)resetDice:(NSMutableArray *)dice {
-    int ndx = 0;
-    while ([[dice objectAtIndex:ndx] intValue] != 1) {
-        ndx++;
-    }
-    [dice removeObjectAtIndex:ndx];
+    dice = [GRDScorer RemoveASingleDie:1
+                              fromDice:dice];
+    
     return dice;
 }
 
@@ -24,11 +22,9 @@
 @implementation GRDSingleFive
 
 - (NSMutableArray *)resetDice:(NSMutableArray *)dice {
-    int ndx = 0;
-    while ([[dice objectAtIndex:ndx] intValue] != 5) {
-        ndx++;
-    }
-    [dice removeObjectAtIndex:ndx];
+    dice = [GRDScorer RemoveASingleDie:5
+                              fromDice:dice];
+    
     return dice;
 }
 

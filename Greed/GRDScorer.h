@@ -14,4 +14,7 @@
 
 - (NSMutableArray *)resetDice:(NSMutableArray *)dice;
 
++ (NSMutableArray *)RemoveASingleDie:(int)die fromDice:(NSMutableArray *)dice;
+
+
 @end

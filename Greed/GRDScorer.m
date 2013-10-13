@@ -12,4 +12,15 @@
 
 @synthesize score;
 
+
++ (NSMutableArray *)RemoveASingleDie:(int)die fromDice:(NSMutableArray *)dice {
+    int ndx = 0;
+    while ([[dice objectAtIndex:ndx] intValue] != die) {
+        ndx++;
+    }
+    [dice removeObjectAtIndex:ndx];
+    return dice;
+}
+
+
 @end
