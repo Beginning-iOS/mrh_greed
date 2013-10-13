@@ -1,14 +1,15 @@
 //
-//  Greed.h
+//  GRDScorer.m
 //  Greed
 //
 //  Created by Mark Haskamp on 10/13/13.
 //  Copyright (c) 2013 Mark Haskamp. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "GRDScorer.h"
 
-@interface Greed : NSObject
+@implementation GRDScorer
 
-- (int) score:(NSMutableArray *)dice;
+@synthesize score;
+
 @end

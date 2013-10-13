@@ -1,5 +1,5 @@
 //
-//  Greed.h
+//  GRDScorer.h
 //  Greed
 //
 //  Created by Mark Haskamp on 10/13/13.
@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Greed : NSObject
+@interface GRDScorer : NSObject
 
-- (int) score:(NSMutableArray *)dice;
+@property(nonatomic) int score;
+
+- (NSMutableArray *)resetDice:(NSMutableArray *)dice;
+
 @end

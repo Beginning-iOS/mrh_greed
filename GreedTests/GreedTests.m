@@ -7,28 +7,46 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "Greed.h"
 
 @interface GreedTests : XCTestCase
 
 @end
 
-@implementation GreedTests
-
-- (void)setUp
-{
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+@implementation GreedTests {
+    Greed *greed;
+    
+    NSMutableArray *dice;
+    NSNumber *one;
+    NSNumber *five;
 }
 
-- (void)tearDown
-{
+
+- (void)setUp {
+    [super setUp];
+    greed = [[Greed alloc] init];
+    dice = [[NSMutableArray alloc] init];
+    one = [NSNumber numberWithInt:1];
+    five = [NSNumber numberWithInt:5];
+    
+}
+
+- (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
+    [dice removeAllObjects];
     [super tearDown];
 }
 
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+- (void)test_ASingleOne {
+    [dice addObject:one];
+    int s = [greed score:dice];
+    XCTAssertEqual(100, s, @"a single 1 scores 100");
+}
+
+- (void)test_ASingleFive {
+    [dice addObject:five];
+    int s = [greed score:dice];
+    XCTAssertEqual(50, s, @"a single 5 scores 50");
 }
 
 @end

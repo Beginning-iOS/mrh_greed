@@ -14,6 +14,12 @@
 		4D8BCC03180B3B6200BE17AA /* Greed.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8BCBEA180B3B6200BE17AA /* Greed.dylib */; };
 		4D8BCC09180B3B6200BE17AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D8BCC07180B3B6200BE17AA /* InfoPlist.strings */; };
 		4D8BCC0B180B3B6200BE17AA /* GreedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8BCC0A180B3B6200BE17AA /* GreedTests.m */; };
+		4D8BCC16180B42F400BE17AA /* GRDScorerFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D8BCC14180B42F400BE17AA /* GRDScorerFactory.h */; };
+		4D8BCC17180B42F400BE17AA /* GRDScorerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8BCC15180B42F400BE17AA /* GRDScorerFactory.m */; };
+		4D8BCC1A180B437C00BE17AA /* GRDScorer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D8BCC18180B437C00BE17AA /* GRDScorer.h */; };
+		4D8BCC1B180B437C00BE17AA /* GRDScorer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8BCC19180B437C00BE17AA /* GRDScorer.m */; };
+		4D8BCC1E180B44FA00BE17AA /* Rules.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D8BCC1C180B44FA00BE17AA /* Rules.h */; };
+		4D8BCC1F180B44FA00BE17AA /* Rules.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8BCC1D180B44FA00BE17AA /* Rules.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +46,12 @@
 		4D8BCC06180B3B6200BE17AA /* GreedTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GreedTests-Info.plist"; sourceTree = "<group>"; };
 		4D8BCC08180B3B6200BE17AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4D8BCC0A180B3B6200BE17AA /* GreedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GreedTests.m; sourceTree = "<group>"; };
+		4D8BCC14180B42F400BE17AA /* GRDScorerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRDScorerFactory.h; sourceTree = "<group>"; };
+		4D8BCC15180B42F400BE17AA /* GRDScorerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRDScorerFactory.m; sourceTree = "<group>"; };
+		4D8BCC18180B437C00BE17AA /* GRDScorer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRDScorer.h; sourceTree = "<group>"; };
+		4D8BCC19180B437C00BE17AA /* GRDScorer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRDScorer.m; sourceTree = "<group>"; };
+		4D8BCC1C180B44FA00BE17AA /* Rules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rules.h; sourceTree = "<group>"; };
+		4D8BCC1D180B44FA00BE17AA /* Rules.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rules.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +121,12 @@
 				4D8BCBF6180B3B6200BE17AA /* Greed.h */,
 				4D8BCBF7180B3B6200BE17AA /* Greed.m */,
 				4D8BCBF4180B3B6200BE17AA /* Supporting Files */,
+				4D8BCC14180B42F400BE17AA /* GRDScorerFactory.h */,
+				4D8BCC15180B42F400BE17AA /* GRDScorerFactory.m */,
+				4D8BCC18180B437C00BE17AA /* GRDScorer.h */,
+				4D8BCC19180B437C00BE17AA /* GRDScorer.m */,
+				4D8BCC1C180B44FA00BE17AA /* Rules.h */,
+				4D8BCC1D180B44FA00BE17AA /* Rules.m */,
 			);
 			path = Greed;
 			sourceTree = "<group>";
@@ -146,6 +164,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D8BCC1E180B44FA00BE17AA /* Rules.h in Headers */,
+				4D8BCC1A180B437C00BE17AA /* GRDScorer.h in Headers */,
+				4D8BCC16180B42F400BE17AA /* GRDScorerFactory.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +256,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D8BCC1B180B437C00BE17AA /* GRDScorer.m in Sources */,
+				4D8BCC1F180B44FA00BE17AA /* Rules.m in Sources */,
+				4D8BCC17180B42F400BE17AA /* GRDScorerFactory.m in Sources */,
 				4D8BCBF8180B3B6200BE17AA /* Greed.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

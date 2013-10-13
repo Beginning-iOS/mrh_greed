@@ -1,5 +1,5 @@
 //
-//  Greed.h
+//  Rules.h
 //  Greed
 //
 //  Created by Mark Haskamp on 10/13/13.
@@ -7,8 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GRDScorer.h"
 
-@interface Greed : NSObject
+@interface GRDSingleOne : GRDScorer
 
-- (int) score:(NSMutableArray *)dice;
 @end
+
+
+@interface GRDSingleFive : GRDScorer
+
+@end
+
+
+@interface GRDEmpty : GRDScorer
+
+@end
+
