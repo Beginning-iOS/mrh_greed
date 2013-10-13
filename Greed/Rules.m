@@ -11,7 +11,11 @@
 @implementation GRDSingleOne
 
 - (NSMutableArray *)resetDice:(NSMutableArray *)dice {
-    [dice removeAllObjects];
+    int ndx = 0;
+    while ([[dice objectAtIndex:ndx] intValue] != 1) {
+        ndx++;
+    }
+    [dice removeObjectAtIndex:ndx];
     return dice;
 }
 
@@ -20,7 +24,11 @@
 @implementation GRDSingleFive
 
 - (NSMutableArray *)resetDice:(NSMutableArray *)dice {
-    [dice removeAllObjects];
+    int ndx = 0;
+    while ([[dice objectAtIndex:ndx] intValue] != 5) {
+        ndx++;
+    }
+    [dice removeObjectAtIndex:ndx];
     return dice;
 }
 

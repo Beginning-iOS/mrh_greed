@@ -49,4 +49,11 @@
     XCTAssertEqual(50, s, @"a single 5 scores 50");
 }
 
+- (void)test_1_1 {
+    [dice addObject:one];
+    [dice addObject:[one copy]];
+    int s = [greed score:dice];
+    XCTAssertEqual(200, s, @"2 1's scores 1200");
+}
+
 @end
